@@ -1,0 +1,127 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #282828;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+.left-column {
+  margin-top: 100px;
+  width: 45%;
+}
+
+.right-column {
+  width: 45%;
+}
+
+.right-column {
+  background: linear-gradient(to right, #ffc107, #282828, #eee);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+h1,
+h2,
+p {
+  color: #ffffff;
+}
+span {
+  color: #ffc107;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin: 0.5rem 0 0.2rem;
+  font-size: large;
+}
+
+form input,
+form select,
+form button {
+  padding: 0.5em;
+  /*input select button are within the form
+  the default value of padding in the form is 16px
+  => 0.5em = 16px * 2 => 0.5em = 8px
+  */
+  margin-bottom: 1em;
+  border: none;
+  border-radius: 7px;
+}
+
+form input:hover {
+  background-color: #ffc107;
+}
+
+form select:hover {
+  background-color: #ffc107;
+}
+
+form button {
+  background-color: #ffcc00;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background-color: #e6b800;
+}
+table {
+  width: 900px;
+  text-align: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+  color: white;
+}
+
+table th {
+  text-transform: uppercase;
+}
+
+table th,
+td {
+  padding: 5px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .left-column {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .right-column {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 0.5em;
+  }
+
+  .right-column {
+    padding: 1em;
+  }
+
+  form input,
+  form select,
+  form button {
+    padding: 0.4em;
+  }
+}

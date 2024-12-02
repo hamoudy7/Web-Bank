@@ -1,0 +1,245 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and overall page styling */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #333;
+  color: #f4f4f4;
+}
+
+/* Header styling */
+header {
+  background: linear-gradient(to right, #ffc107, #282828, #eee);
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav ul {
+  font-weight: 700;
+}
+
+header nav ul :hover {
+  color: #ffc107;
+  transition: 0.4s;
+}
+
+header img {
+  width: 70px;
+  border-radius: 20px;
+}
+
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+}
+
+header nav ul li {
+  margin-left: 20px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+header .profile {
+  display: flex;
+  align-items: center;
+}
+
+header .profile img {
+  border-radius: 20%;
+  width: 60px;
+  height: 70px;
+  margin-right: 10px;
+}
+header .profile {
+  color: #000000;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Main dashboard layout */
+main {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Account overview styling */
+.account-overview {
+  flex: 1 1 100%;
+  background: linear-gradient(to right, #ffc107, #282828, #eee);
+  padding: 20px;
+  border-radius: 8px;
+  color: #000000;
+}
+
+.account-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.account-card {
+  background: linear-gradient(to left, #ffc107, #f8f1f1);
+  color: rgb(0, 0, 0);
+  box-shadow: 5px 5px 5px rgb(3, 3, 3);
+  padding: 20px;
+  border-radius: 8px;
+  flex: 1;
+  text-align: center;
+}
+
+/* Recent transactions styling */
+.recent-transactions {
+  flex: 1 1 60%;
+  background: linear-gradient(to left, #ffc107, #f8f1f1);
+  padding: 20px;
+  border-radius: 8px;
+  color: #000000;
+}
+#search {
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  max-width: 300px;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+#search:hover {
+  background-color: #f1bb19;
+  color: #000000;
+  transition: 0.4s;
+}
+
+.recent-transactions table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.recent-transactions table,
+.recent-transactions th,
+.recent-transactions td {
+  border: 1px solid #070707;
+}
+
+.recent-transactions th,
+.recent-transactions td {
+  padding: 10px;
+  text-align: left;
+}
+
+/* Quick actions styling */
+.quick-actions {
+  flex: 1 1 35%;
+  background: linear-gradient(to left, #ffc107, #f8f1f1);
+  color: #000000;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.quick-actions .actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.quick-actions button {
+  padding: 10px;
+  background-color: #333435;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.quick-actions button a {
+  color: white;
+  text-decoration: none;
+}
+
+.quick-actions button:hover {
+  background-color: #f1bb19;
+  color: #000000;
+}
+
+.quick-actions img {
+  width: 100px;
+  border-radius: 20px;
+  align-self: center;
+}
+
+/* Notifications styling */
+.notifications {
+  flex: 1 1 35%;
+  background: linear-gradient(to right, #ffc107, #282828, #eee);
+  color: #000000;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.notifications .alert {
+  background-color: #f8f0d7;
+  color: #83121d;
+  font-weight: 700;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+/* Footer styling */
+footer {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #ffc107;
+  color: rgb(10, 10, 10);
+  font-weight: 700;
+}
+
+footer a {
+  color: rgb(15, 15, 15);
+  text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  header nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  .account-cards {
+    flex-direction: column;
+  }
+
+  .recent-transactions,
+  .quick-actions,
+  .notifications {
+    flex: 1 1 100%;
+  }
+}

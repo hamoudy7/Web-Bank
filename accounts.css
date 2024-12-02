@@ -1,0 +1,80 @@
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #ffc107, #282828, #eee);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: #fffdfd;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0px 0px 0px 0px #eee;
+  }
+  to {
+    box-shadow: 0px 0px 20px 5px #ffc107;
+  }
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Ensure consistent input and select widths */
+input[type="text"],
+input[type="number"],
+select {
+  width: calc(100% - 20px); /* Adjust for padding */
+  max-width: 360px;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; /* Ensure padding doesn't overflow */
+}
+
+button {
+  width: 100%; /* Keep buttons full width */
+  background-color: #333;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ca9905;
+  transition: 0.4s;
+}
+
+#successMessage {
+  margin-top: 20px;
+  font-size: 16px;
+  color: green;
+  text-align: center;
+}

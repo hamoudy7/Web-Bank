@@ -1,0 +1,35 @@
+* {
+  padding: 0%;
+  margin: 0%;
+}
+
+body {
+  background: linear-gradient(to right, #d69f05, #e6c24c, #131212);
+}
+
+.card h5 {
+  color: aliceblue;
+}
+
+.card .btn {
+  background-color: rgb(75, 74, 70);
+  color: aliceblue;
+  border-radius: 10px;
+  border: none;
+}
+
+.card .btn:hover {
+  background-color: #d69f05;
+  color: #131212;
+  border: none;
+}
+.card .btn:active {
+  border: none;
+}
+
+.container img {
+  opacity: 0.8;
+}
+.container img:hover {
+  opacity: 1;
+}

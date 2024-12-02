@@ -1,0 +1,297 @@
+/* Reset some default styles */
+body,
+h1,
+h2,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: linear-gradient(to right, #ffc107, #282828, #eee);
+  color: #fff;
+}
+
+.navbar .logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.navbar .logo:hover {
+  color: #000;
+  transition: 0.4s;
+  background-color: #eee;
+  border-radius: 10px;
+}
+
+.navbar nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.navbar nav ul li a:hover {
+  color: #ffd700;
+  transition: 0.4s;
+}
+
+.navbar .logo {
+  color: #ffffff;
+  font-weight: 200;
+}
+
+.navbar img {
+  width: 55px;
+  border-radius: 20px;
+}
+.auth-buttons a {
+  background-color: #ffd700;
+  border: none;
+  padding: 10px 20px;
+  color: #000;
+  cursor: pointer;
+  margin-left: 10px;
+  border-radius: 20px;
+}
+
+.auth-buttons a:hover {
+  background-color: #ffc107;
+  transition: 0.4s;
+  text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 50px;
+  background-color: #202020;
+  color: #fff;
+}
+
+.hero-content {
+  max-width: 100%;
+  flex: 1;
+}
+
+.hero-content h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #ffc107;
+}
+
+.hero-content p {
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.hero-content span {
+  color: #ffc107;
+  font-size: 20px;
+}
+
+.hero-image {
+  flex: 1;
+  text-align: center;
+  max-width: 100%;
+}
+
+.hero-image img {
+  width: 400px;
+  height: auto;
+  border-radius: 20px;
+  opacity: 0.7;
+  animation: floatImage 4s ease-in-out infinite;
+}
+@keyframes floatImage {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-1rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.hero-image img:hover {
+  opacity: 2;
+}
+
+/* Features Section */
+.features {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /*flex-wrap: wrap;*/
+  padding: 50px;
+  background: linear-gradient(to top, #ffc107, #282828, #eee);
+  color: #fff;
+}
+
+.feature h2 {
+  font-size: 2em;
+  color: #ffd700;
+}
+
+.feature p {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+.feature img {
+  width: 100px;
+  border-radius: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .auth-buttons {
+    margin-top: 10px;
+  }
+
+  .hero-content h1 {
+    font-size: 2em;
+  }
+
+  .features {
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .feature {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .hero-image img {
+    width: 400px;
+    height: auto;
+    border-radius: 20px;
+    opacity: 0.7;
+    animation: floatImage 4s ease-in-out infinite;
+    margin-top: 20px;
+    margin-right: 20px;
+  }
+  @keyframes floatImage {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-0.2rem);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .features .feature {
+    padding: 10px;
+  }
+}
+
+/* Responsive Styles for Tablets */
+@media (max-width: 1000px) {
+  .hero {
+    flex-direction: column; /*to put the image under the texte*/
+  }
+
+  .hero-content h1 {
+    font-size: 2em;
+  }
+
+  .hero-image img {
+    width: 500px;
+  }
+}
+@media (max-width: 768px) {
+  /* Adjust navbar */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Adjust hero section */
+  .hero {
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .hero-content h1 {
+    font-size: 2em;
+  }
+
+  .hero-image img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  /* Adjust features section */
+  .features {
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .feature {
+    margin-bottom: 20px;
+  }
+
+  .feature h2 {
+    font-size: 1.5em;
+  }
+
+  .feature p {
+    font-size: 1em;
+  }
+
+  .feature img {
+    width: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.8em;
+  }
+
+  .hero-content p {
+    font-size: 1em;
+  }
+
+  .auth-buttons a {
+    margin-left: 40px;
+  }
+
+  .feature h2 {
+    font-size: 1.5em;
+  }
+
+  .feature p {
+    font-size: 1em;
+  }
+  .hero-image img {
+    width: 400px;
+  }
+}
